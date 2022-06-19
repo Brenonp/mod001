@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Sistema Vidraçaria </title>
+</head>
+<body>
+    
+     <h1 id="titulo">Vidraçaria Mini Vidro</h1>
+     <p id="subtitulo">Orçamento para Espelhos</p>
+    
+    <p id="alt"><strong>Altura (cm)</strong></p>
+    
+    <input type="number" placeholder="Digite aqui" name="altura" id="altura">
+    <br>
+    <p id="larg"><strong>Largura (cm)</strong></p>
+    
+    <input type="number" placeholder="Digite aqui" name="largura" id="largura">
+    <br>
+    <input type="submit" value="Calcular" onclick="multiplicar()" id="botao">
+    <br>
+    <div id="res"></div>
+    
+    
+   <script>
+        function multiplicar() {
+            var altura1 = window.document.getElementById('altura')
+            var largura2 = window.document.querySelector('input#largura')
+            var res = window.document.getElementById('res')
+            var a = Number(altura1.value)
+            var b = Number(largura2.value)
+            var m = a * b
+            var t = m / 10000
+            var v = t * 160
+            res.innerHTML = `O valor do espelho é R$ ${v}`
+        }
+   </script>   
+
+   
+</body>
+</html>
